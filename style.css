@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inconsolata', monospace;
+    /* background-image: url('../img/DrivingRoad.jpg');
+    background-size: cover; */
+}
+
+#logo{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    background-image: url('../img/CLKCLogo2.png');
+    background-size: cover;
+    width: 75px;
+    height: 125px;
+}
+
+.nav{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.cover {
+    background-image: url('../img/DrivingRoad.jpg');
+    background-size: cover;
+    height: 1300px;
+    color: #EEEEEE;
+}
+
+.content{
+    position: relative;
+    left: 200px;
+    top: 200px;
+    background-color: #838383;
+}
+
+.little{
+    font-size: 150%;
+}
+
+.big{
+    font-size: 160%;
+}
+
+.options{
+    font-size: 150%;
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
