@@ -15,8 +15,9 @@ body {
     margin: 5px;
     background-image: url('../img/CLKCLogo2.png');
     background-size: cover;
-    width: 75px;
-    height: 125px;
+    width: 100px;
+    height: 138px;
+    z-index: 100;
 }
 
 .nav{
@@ -27,6 +28,17 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    z-index: 99;
+}
+
+.nav :first-child{
+    padding: 0;
+}
+
+
+.nav ul:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .cover {
@@ -38,33 +50,84 @@ body {
 
 .content{
     position: relative;
-    left: 200px;
-    top: 200px;
+    left: 230px;
+    top: 260px;
     background-color: #838383;
 }
 
 .little{
+    padding: 0px;
+    padding-bottom: 10px;
+    margin: 0px;
+    display: flex;
     font-size: 150%;
+    width: 140px;
+    justify-content: flex-start;
+    animation-duration: 5s;
+    animation-name: goRight;
+    animation-iteration-count: infinite;
+}
+
+@keyframes goRight {
+    from {
+      transform: translate(0,0);
+    }
+  
+    to {
+      transform: translate(1720px,0);
+    }
+}
+
+.little h6{
+    padding: 0px;
+    margin: 0px;
 }
 
 .big{
     font-size: 160%;
 }
+.big h2{
+    padding: 0px;
+    margin: 0px;
+}
 
 .options{
+    padding: 0px;
+    padding-top: 10px;
+    margin: 0px;
     font-size: 150%;
-    width: 340px;
+    width: 380px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 #button1{
+    padding: 0px;
+    margin: 0px;
     background-color: #585858;
+    cursor: pointer;
+    padding: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: linear;
 }
 
 #button2{
+    padding: 0px;
+    margin: 0px;
     background-color: #838383;
+    cursor: pointer;
+    padding: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: linear;
 }
 
 #button1:hover{
@@ -99,6 +162,11 @@ footer{
     justify-content: space-around;
 }
 
+#tags ul:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 #tag1{
     margin: 0;
     padding: 0;
@@ -107,3 +175,35 @@ footer{
 #tag{
     margin: 0;
 }
+
+#cm:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#tags i:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input[type=text]{
+    font-family: 'Inconsolata', monospace;
+    font-size: 100%;
+    color: #EEEEEE;
+    box-sizing: border-box;
+    border: 2px solid black;
+    height: 40px;
+    background-color: black;
+    border-radius: 4px;
+}
+
+input[type=submit]{
+    font-family: 'Inconsolata', monospace;
+    font-size: 100%;
+    color: #EEEEEE;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 4px;
+}
+
