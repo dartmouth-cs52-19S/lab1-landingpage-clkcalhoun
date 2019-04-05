@@ -1,8 +1,21 @@
+<!-- 
+Created by Craig Calhoun
+Inspired by Specialized.com 
+References:
+https://css-tricks.com/the-checkbox-hack/
+https://stackoverflow.com/questions/21338045/css-linear-animation-across-screen 
+icons from:
+https://fontawesome.com/start 
+photos from google images sourced from links below (only including the ones I found after hearing this is importatn):
+https://www.carspecwall.com/porsche/911-series/911-gt3/911-gt3-rs-2015/porsche-911-gt3-rs-2015-wallpaper-002/ 
+https://www.lamborghini.com/en-en/models/huracan/huracan-performante 
+-->
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>
-            Specilized Inspo
+            CLKCALHOUN
         </title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type='text/css'>
@@ -11,6 +24,21 @@
     <body>
         <span id="logo"></span>
         <div class="nav">
+            <ul href="#">bio</ul>
+            <ul href="#">blog</ul>
+            <ul href="#">photos</ul>
+            <ul href="#">videos</ul>
+            <ul href="#">podcasts</ul>
+            <ul href="#">projects</ul>
+            <ul href="#">merch</ul>
+        </div>
+        <label for="toggle-1">
+            <div class="menu">
+                <img src="img/bars.png">
+            </div>
+        </label>
+        <input type="checkbox" id="toggle-1">
+        <div class="expand">
             <ul href="#">bio</ul>
             <ul href="#">blog</ul>
             <ul href="#">photos</ul>
@@ -33,12 +61,18 @@
                 </span>
             </span>
         </div>
-
-
+        <div class="extrac">
+            <span class="hp">
+                <img src="img/hp.jpg">
+            </span>
+            <span class="hp">
+                <img src="img/p.jpg">
+            </span>
+        </div>
         <footer>
             <span>
                 <h3 id="footerTitles">UPDATES</h3>
-                <form>
+                <form id="form">
                     <input type = "text" name = "email" onfocus="this.value='';" value="email">
                     <input type = "submit" name = "submit" value="submit">
                 </form>
@@ -60,7 +94,9 @@
             <br>
             <span>
                 <h3 id="footerTitles">GET IN TOUCH</h3>
-                <ul id="cm" href="#">contact me</ul>
+                <span id="cms">
+                    <ul id="cm" href="#">contact me</ul>
+                </span>
                 <span id="tags">
                     <i class="fab fa-twitter-square"></i>
                     <i class="fab fa-instagram"></i>

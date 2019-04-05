@@ -31,6 +31,41 @@ body {
     z-index: 99;
 }
 
+.menu{
+    opacity: 0;
+    height: 0;
+    z-index: 0;
+}
+
+.menu img{
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+}
+
+.expand{
+    opacity: 0;
+    height: 0;
+    z-index: 0;
+}
+
+input[type=checkbox]:checked ~ .expand{
+    height: 0;
+    opacity: 0;
+    z-index: 102;
+}
+input[type=checkbox]:checked ~ .expand *{
+    cursor: pointer;
+    height: 0;
+    opacity: 0;
+}
+
+input[type=checkbox]{
+    opacity: 0;
+    height: 0;
+}
+
 .nav :first-child{
     padding: 0;
 }
@@ -52,7 +87,6 @@ body {
     position: relative;
     left: 230px;
     top: 260px;
-    background-color: #838383;
 }
 
 .little{
@@ -114,6 +148,7 @@ body {
     transition-property: all;
     transition-duration: .2s;
     transition-timing-function: linear;
+    z-index: 10;
 }
 
 #button2{
@@ -128,6 +163,7 @@ body {
     transition-property: all;
     transition-duration: .2s;
     transition-timing-function: linear;
+    z-index: 10;
 }
 
 #button1:hover{
@@ -136,6 +172,20 @@ body {
 
 #button2:hover{
     background-color: #2f2f2f;
+}
+
+.extrac{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.hp *{
+    height: 100%;
+    color: #EEEEEE;
 }
 
 footer{
@@ -205,5 +255,183 @@ input[type=submit]{
     border: 2px solid black;
     background-color: black;
     border-radius: 4px;
+}
+
+
+
+
+@media only screen and (max-width: 640px) {
+    .cover {
+        background-image: url('../img/DrivingRoad.jpg');
+        background-size: cover;
+        height: 700px;
+        color: #EEEEEE;
+    }
+    .nav{
+        opacity: 0;
+        height: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 99;
+        padding-left: 150px; 
+    }
+    .menu{
+        cursor: pointer;
+        height: 49px;
+        opacity: 1;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        z-index: 99;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .menu img{
+        z-index: 101;
+        width: 45px;
+        height: 45px;
+        padding: 3px;
+        transform: rotate(0deg);
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around
+    }
+    #form{
+        display: flex;
+        justify-content: space-around
+    }
+    #tags{
+        padding-bottom: 20px;
+    }
+    #tag{
+        margin: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    #cms{
+        display: flex;
+        justify-content: center;
+    }
+    #cm{
+        padding: 0;
+        margin: 0;
+        padding-bottom: 10px;
+    }
+    .expand{
+        opacity: 0;
+        position: fixed;
+        right: 0px;
+        top: 49px;
+        background-color: white;
+        height: 0px;
+        width: 54.8%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 0;
+        padding-right: 30px; 
+    }
+    .expand *{
+        padding-left: 80px;
+        background-color: white;
+        cursor: default;
+    }
+    .expand *:hover{
+        text-decoration: underline;
+    }
+    input[type=checkbox]:checked ~ .expand{
+        height: 43%;
+        opacity: 1;
+        z-index: 102;
+        transition-property: opacity;
+        transition-duration: .5s;
+        transition-timing-function: linear;
+        transition-delay: 0;
+    }
+    input[type=checkbox]:checked ~ .expand *{
+        cursor: pointer;
+        height: 43%;
+        opacity: 1;
+    }
+    .content{
+        position: relative;
+        left: 30px;
+        top: 200px;
+    }
+    .big{
+        font-size: 110%;
+    }
+    .little{
+        animation-duration: 3s;
+        animation-name: goRight;
+        animation-iteration-count: infinite;
+    }
+    @keyframes goRight {
+        from {
+          transform: translate(0,0);
+        }
+      
+        to {
+          transform: translate(400px,0);
+        }
+    }
+    .options{
+        font-size: 97%;
+        width: 270px;
+    }
+    #button1{
+        padding: 0px;
+        margin: 0px;
+        background-color: #585858;
+        cursor: pointer;
+        padding: 14px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        transition-property: all;
+        transition-duration: .2s;
+        transition-timing-function: linear;
+        z-index: 10;
+    }
+    
+    #button2{
+        padding: 0px;
+        margin: 0px;
+        background-color: #838383;
+        cursor: pointer;
+        padding: 14px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        transition-property: all;
+        transition-duration: .2s;
+        transition-timing-function: linear;
+        z-index: 10;
+    }
+    #button1:hover{
+        background-color: #2f2f2f;
+    }
+    
+    #button2:hover{
+        background-color: #2f2f2f;
+    }
+    .extrac{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .hp {
+        padding: 25px;
+    }
+    .hp *{
+        width: 100%;
+        color: #EEEEEE;
+    }
 }
 
